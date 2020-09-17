@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Sketchbook.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <StackLayout>
+                <Label Text="Sketchbook" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title" />
+                <StackLayout Orientation="Horizontal" Padding="5">
+                    <ImageButton BackgroundColor="Transparent" Source="pencil.png" HeightRequest="24" WidthRequest="24" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        <skia:SKCanvasView HeightRequest="600" WidthRequest="800" Touch="OnCanvasTouchEvent" EnableTouchEvents="True" BackgroundColor="Transparent" PaintSurface="OnPaintSurface" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+
+</ContentPage>
